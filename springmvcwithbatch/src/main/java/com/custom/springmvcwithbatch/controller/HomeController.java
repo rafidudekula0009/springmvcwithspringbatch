@@ -13,11 +13,14 @@ import org.springframework.web.servlet.ModelAndView;
 import com.custom.springmvcwithbatch.config.CustomerService;
 import com.custom.springmvcwithbatch.entity.Customer;
 
+//import io.micrometer.core.instrument.util.IOUtils;
+
 @Controller
 public class HomeController {
 
 	 @Autowired
 	    private CustomerService customerService;
+	 
 	//http://localhost:8080/springmvcwithbatch	 
 	@RequestMapping(value="/")
 	public ModelAndView test(HttpServletResponse response) throws IOException{
@@ -33,4 +36,7 @@ public class HomeController {
 	    ModelAndView mav = new ModelAndView("insert_success");
 		return new ModelAndView("insert_success");
 	}
+	
+	
+	
 }
