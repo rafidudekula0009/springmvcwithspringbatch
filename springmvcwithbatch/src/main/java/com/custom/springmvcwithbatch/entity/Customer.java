@@ -4,8 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
  
 @Entity
+@Table(name = "Customer")
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -50,7 +52,7 @@ public class Customer {
 		this.address = address;
 	}
 
-	protected Customer(String name, String email, String address) {
+	public Customer(String name, String email, String address) {
         this.name = name;
         this.email = email;
         this.address = address;

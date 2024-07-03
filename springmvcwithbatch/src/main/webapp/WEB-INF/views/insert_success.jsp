@@ -9,6 +9,6 @@
     </head>
     <body>
         <h1>Hello World!</h1>
-        <p>This is the homepage! welcome to springmvcwithbatch</p>
+        <p>customer insterted successfully!!</p>
     </body>
 </html>
