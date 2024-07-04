@@ -32,7 +32,7 @@ public class HomeController {
 	@RequestMapping(value="insert_customer/{name}/{email}/{address}")
 	public ModelAndView insertCustomer(HttpServletResponse response, @PathVariable("name") String name, @PathVariable("email") String email, @PathVariable("address") String address) throws IOException{
 		customerService.save(new Customer(name, email, address));
-		
+		System.out.println("------insertCustomer invoked!!-------");
 	    ModelAndView mav = new ModelAndView("insert_success");
 		return new ModelAndView("insert_success");
 	}
