@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  docker-mysql:
+    image: mysql:8.0
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=mysql
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=password
+    ports:
+      - 3307:3306
+
+  app:
+    image: my-image24:latest
+    ports:
+       - 8091:8091
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/mysql
+    depends_on:
+       - docker-mysql
