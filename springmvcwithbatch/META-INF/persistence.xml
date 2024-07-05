@@ -7,10 +7,11 @@
      
     <persistence-unit name="SalesDB">
         <properties>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/sales" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://all-mysql:3306/sales?createDatabaseIfNotExist=true&amp;allowPublicKeyRetrieval=true&amp;useSSL=False" />
             <property name="javax.persistence.jdbc.user" value="root" />
             <property name="javax.persistence.jdbc.password" value="password" />
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <!-- <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" /> -->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
             <property name="hibernate.show_sql" value="true" />
             <property name="hibernate.format_sql" value="true" />
             <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
@@ -18,6 +19,7 @@
             <property name="hibernate.connection.autocommit" value="true" />
             <!-- <property name="hibernate.transaction.coordinator_class" value="jta"/> -->
             <property name="hibernate.dialect" value="org.hibernate.dialect.MariaDBDialect"/>
+            <!-- <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLInnoDBDialect"/> -->
         </properties>
     </persistence-unit>
      
