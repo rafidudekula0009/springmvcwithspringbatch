@@ -1,6 +1,6 @@
 package com.custom.springmvcwithbatch.config;
 
-import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -14,7 +14,6 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @Configuration
 @ComponentScan(basePackages="com.custom.springmvcwithbatch")
 @EnableWebMvc
-@EnableBatchProcessing
 @EnableJpaRepositories("com.custom.springmvcwithbatch.config")
 public class MvcConfiguration extends WebMvcConfigurerAdapter{
 
