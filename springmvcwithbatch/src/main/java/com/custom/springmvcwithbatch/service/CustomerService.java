@@ -1,4 +1,4 @@
-package com.custom.springmvcwithbatch.config;
+package com.custom.springmvcwithbatch.service;
  
 import java.util.List;
 
@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.custom.springmvcwithbatch.dao.CustomerRepository;
 import com.custom.springmvcwithbatch.entity.Customer;
  
 @Service

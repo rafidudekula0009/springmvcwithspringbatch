@@ -1,4 +1,4 @@
-package com.custom.springmvcwithbatch.config;
+package com.custom.springmvcwithbatch.dao;
  
 import org.springframework.data.repository.CrudRepository;
 
