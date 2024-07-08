@@ -1,4 +1,4 @@
-package com.custom.springmvcwithbatch.config;
+package com.custom.springmvcwithbatch.service;
  
 import java.util.List;
 
