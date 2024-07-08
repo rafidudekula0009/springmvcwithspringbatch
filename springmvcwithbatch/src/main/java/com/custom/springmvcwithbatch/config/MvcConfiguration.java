@@ -14,7 +14,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @Configuration
 @ComponentScan(basePackages="com.custom.springmvcwithbatch")
 @EnableWebMvc
-@EnableJpaRepositories("com.custom.springmvcwithbatch.config")
+@EnableJpaRepositories("com.custom.springmvcwithbatch.dao")
 public class MvcConfiguration extends WebMvcConfigurerAdapter{
 
 	@Bean
