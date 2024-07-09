@@ -136,13 +136,13 @@
 			</plugin>
 			
 			<!--It will deploy or place the war file generated when we run maven clean install to this location mentioned in outputDirectory-->
-			<plugin>
+			<!--<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<configuration>
 					<outputDirectory>C:/Users/rafid/git/springmvcwithspringbatch/springmvcwithbatch/target</outputDirectory>
 				</configuration>
-			</plugin>
+			</plugin>-->
 		</plugins>
 	</build>
 </project>
