@@ -19,24 +19,24 @@ import org.springframework.web.client.RestTemplate;
 public class HelloController {
 
 	 RestTemplate rest = new RestTemplate();
-	 String REST_URI="http://localhost:90/springmvcwithbatch/hello/sayHello/";
-	 String REST_URI_CONTAINER="http://host.docker.internal:90/springmvcwithbatch/hello/sayHello/";
+	 String REST_URI="http://localhost:90/parent/hello/sayHello/";
+	 String REST_URI_CONTAINER="http://host.docker.internal:90/parent/hello/sayHello/";
 	 
-	 // http://localhost:8080/springmvcwithbatch/hello/rafi
-	@RequestMapping(value="/hello/{name}", method=RequestMethod.GET, produces="text/plain")
+	 // http://localhost:8080/springmvcmultimodule/hello_with_localhost/rafi
+	@RequestMapping(value="/hello_with_localhost/{name}", method=RequestMethod.GET, produces="text/plain")
 	@ResponseBody
 	public String getHelloMsg(HttpServletResponse response, @PathVariable("name") String name) throws IOException{
-		System.out.println("getHelloMsg invoked!!!!!");
+		System.out.println("child getHelloMsg for localhost invoked!!!!!");
 		String resp=rest.getForObject(
 	            REST_URI+name,
 	            String.class);
 		return resp;
 	}
 	
-	@RequestMapping(value="/hello1/{name}", method=RequestMethod.GET, produces="text/plain")
+	@RequestMapping(value="/hello_with_docker_host/{name}", method=RequestMethod.GET, produces="text/plain")
 	@ResponseBody
 	public String getHelloMsg1(HttpServletResponse response, @PathVariable("name") String name) throws IOException{
-		System.out.println("getHelloMsg1 invoked!!!!!");
+		System.out.println("child getHelloMsg1 for docker(host.docker.internal) invoked!!!!!");
 		String resp=rest.getForObject(
 				REST_URI_CONTAINER+name,
 	            String.class);
