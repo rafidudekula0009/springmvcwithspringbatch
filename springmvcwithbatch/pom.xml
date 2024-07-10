@@ -123,7 +123,7 @@
 	</repositories>
 
 	<build>
-		<finalName>test2_1</finalName>
+		<finalName>child</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
