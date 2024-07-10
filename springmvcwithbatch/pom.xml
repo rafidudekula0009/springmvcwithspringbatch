@@ -113,7 +113,7 @@
 	</repositories>
 
 	<build>
-		<finalName>springmvcwithbatch</finalName>
+		<finalName>parent</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

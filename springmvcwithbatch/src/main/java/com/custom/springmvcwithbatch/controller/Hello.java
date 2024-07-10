@@ -16,6 +16,7 @@ public class Hello {
 	@RequestMapping(value="sayHello/{name}", method=RequestMethod.GET, produces="text/plain")
 	@ResponseBody
 	public String sayHello(HttpServletResponse response, @PathVariable("name") String name){
-		return "Hello "+name+", how are you?";
+		System.out.println("parent sayHello invoked!!. name=> "+name);
+		return "Hello "+name+", how are you from parent?";
 	}
 }

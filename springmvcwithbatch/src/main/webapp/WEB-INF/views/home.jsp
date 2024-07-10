@@ -8,7 +8,7 @@
         <title>Home</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
-        <p>This is the homepage! welcome to springmvcwithbatch</p>
+        <h1>Parent is Active!!</h1>
+        <p>This is the homepage</p>
     </body>
 </html>
